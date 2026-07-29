@@ -9,7 +9,7 @@ script = ExtResource("1_i1b5p")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=451203549]
 target_position = Vector2(20, 0)
-collision_mask = 2
+collision_mask = 6
 collide_with_areas = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RayCast2D" unique_id=1008366568]

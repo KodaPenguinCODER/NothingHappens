@@ -28,6 +28,9 @@ func _physics_process(delta: float) -> void:
 
 	
 	if collider:
+		if "health" in collider:
+			collider.health -= 1
+			
 		queue_free() #deletes itself
 	else:
 		position = new_position #so if it doesnt collide with a wall, then it will move to its next position, otherwise it will be at where it collided

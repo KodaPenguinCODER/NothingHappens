@@ -1,7 +1,8 @@
 extends Node2D
 
 @onready var target = get_parent().get_node("Target")
-var speed = 200 #p/s to target
+var speed #p/s to target
+var health = 1
 
 
 func _process(delta: float) -> void:
@@ -17,3 +18,6 @@ func _process(delta: float) -> void:
 		scale.x = 1
 	
 	position += transform.x * speed * delta
+	
+	if health <= 0:
+		queue_free()

@@ -27,6 +27,7 @@ Main="*res://scripts/main.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -155,7 +156,7 @@ drop={
 2d_physics/layer_1="player"
 2d_navigation/layer_1="Navigation"
 2d_physics/layer_2="Walls"
-2d_physics/layer_3="Layer 3"
+2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Layer 4"
 2d_physics/layer_5="Layer5"
 2d_physics/layer_6="Layer 6"

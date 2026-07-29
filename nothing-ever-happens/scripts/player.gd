@@ -48,7 +48,8 @@ func _physics_process(_delta: float) -> void:
 	
 	#jump
 	if Input.is_action_just_pressed("Jump"):
-		velocity.y += JUMP_VELOCITY
+		if is_on_floor():
+			velocity.y += JUMP_VELOCITY
 	
 	#drag
 	if is_on_floor():

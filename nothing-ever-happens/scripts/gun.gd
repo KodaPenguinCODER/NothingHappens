@@ -7,7 +7,7 @@ var cooldown = 0.1
 var bullet_scene = preload("res://Scenes/bullet.tscn") #loads bullet scene
 var bullet_spread = 5
 var damage = 1
-var speed = 100
+var speed = 500
 
 
 func shoot(): #func shoots a bullet

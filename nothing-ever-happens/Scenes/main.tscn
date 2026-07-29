@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duhh8p10bsq7r" path="res://scripts/main.gd" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://bgq2un7hr3br" path="res://Textures/icon.svg" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://2tmoyohtj36q" path="res://Scenes/Enemy.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://bncouy3l17qmv" path="res://Scenes/target.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://b3wsmb8jisul5" path="res://Scenes/player.tscn" id="11_d1ilt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xjght"]
@@ -85,35 +85,27 @@ sources/1 = SubResource("TileSetAtlasSource_jjvhh")
 script = ExtResource("1_bo1nx")
 
 [node name="player0" parent="." unique_id=293540474 instance=ExtResource("11_d1ilt")]
-position = Vector2(331, 176)
-
-[node name="Camera2D" type="Camera2D" parent="player0" unique_id=1529305450]
-zoom = Vector2(2, 2)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.05
-drag_top_margin = 0.05
-drag_right_margin = 0.05
-drag_bottom_margin = 0.05
+position = Vector2(-145, -94)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=660469161]
+position = Vector2(-476, -270)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAAABAAAQABAAEAAAAAAA8AAQABAAEAAAAAAA4AAQABAAEAAAAAAA0AAQABAAEAAAAAAAsAAQABAAEAAAAAAAoAAQABAAEAAAAAAAkAAQABAAEAAAAAAAgAAQABAAEAAAAAAAcAAQABAAEAAAAAAAYAAQABAAEAAAAAAAUAAQABAAEAAAAAAAQAAQABAAEAAAAAAAMAAQABAAEAAAAAAAIAAQABAAEAAAAAAAEAAQABAAEAAAAAAAAAAQABAAEAAAABABAAAQABAAEAAAACABAAAQABAAEAAAADABAAAQABAAEAAAAEABAAAQABAAEAAAAFABAAAQABAAEAAAAGABAAAQABAAEAAAAHABAAAQABAAEAAAAIABAAAQABAAEAAAAJABAAAQABAAEAAAAKABAAAQABAAEAAAALABAAAQABAAEAAAAMABAAAQABAAEAAAANABAAAQABAAEAAAAOABAAAQABAAEAAAAPABAAAQABAAEAAAAQABAAAQABAAEAAAARABAAAQABAAEAAAASABAAAQABAAEAAAATABAAAQABAAEAAAAUABAAAQABAAEAAAAVABAAAQABAAEAAAAWABAAAQABAAEAAAAXABAAAQABAAEAAAAYABAAAQABAAEAAAAZABAAAQABAAEAAAAaABAAAQABAAEAAAAbABAAAQABAAEAAAAcABAAAQABAAEAAAAdABAAAQABAAEAAAAdAA8AAQABAAEAAAAdAA4AAQABAAEAAAAdAA0AAQABAAEAAAAdAAwAAQABAAEAAAAdAAsAAQABAAEAAAAdAAoAAQABAAEAAAAdAAkAAQABAAEAAAAdAAgAAQABAAEAAAAdAAcAAQABAAEAAAAdAAYAAQABAAEAAAAdAAUAAQABAAEAAAAdAAQAAQABAAEAAAAdAAMAAQABAAEAAAAdAAIAAQABAAEAAAAdAAEAAQABAAEAAAAdAAAAAQABAAEAAAAAAAwAAQABAAEAAAAGAA8AAQABAAEAAAAGAA4AAQABAAEAAAAGAA0AAQABAAEAAAAGAAwAAQABAAEAAAAHAA0AAQABAAEAAAAHAA4AAQABAAEAAAAHAA8AAQABAAEAAAA=")
 tile_set = SubResource("TileSet_tye4b")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1943895834]
+position = Vector2(-476, -270)
 rotation = 0.7853982
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAeAPX/AQABAAEAAAAeAPb/AQABAAEAAAAeAPf/AQABAAEAAAAeAPj/AQABAAEAAAAfAPf/AQABAAEAAAAfAPb/AQABAAEAAAA=")
 tile_set = SubResource("TileSet_tye4b")
 
-[node name="Enemy" parent="." unique_id=975851730 instance=ExtResource("4_jjvhh")]
-position = Vector2(182, 286)
+[node name="Target" parent="." unique_id=1360887574 instance=ExtResource("4_jjvhh")]
+position = Vector2(4, 0)
 
-[node name="Target" type="Node2D" parent="." unique_id=1432481430]
-position = Vector2(467, 244)
-
-[node name="Sprite2D" type="Sprite2D" parent="Target" unique_id=2017495956]
-scale = Vector2(0.315, 0.315)
-skew = -0.4956735
-texture = ExtResource("3_8gbba")
+[node name="Camera2D" type="Camera2D" parent="Target" unique_id=1529305450]
+zoom = Vector2(2, 2)
+drag_left_margin = 0.05
+drag_top_margin = 0.05
+drag_right_margin = 0.05
+drag_bottom_margin = 0.05
