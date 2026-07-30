@@ -12,7 +12,7 @@ var speed = 500
 
 func shoot(): #func shoots a bullet
 
-	print("shoot")
+	#print("shoot")
 
 	var bullet = bullet_scene.instantiate() #defines var bullet as the instantiated bullet scene
 	

@@ -3,14 +3,24 @@
 [ext_resource type="Script" uid="uid://c1ve0do1lsgam" path="res://scripts/target.gd" id="1_ls7vh"]
 [ext_resource type="Texture2D" uid="uid://bgq2un7hr3br" path="res://Textures/icon.svg" id="2_2228f"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xdv5"]
+size = Vector2(6, 6)
+
 [node name="Target" type="Node2D" unique_id=1360887574 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_ls7vh")
 timer = NodePath("Timer")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1701714854]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=859612204]
+shape = SubResource("RectangleShape2D_5xdv5")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1580326397]
 scale = Vector2(0.315, 0.315)
-skew = -0.4956735
 texture = ExtResource("2_2228f")
 
 [node name="Timer" type="Timer" parent="." unique_id=1700489211]
 one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -20,4 +20,9 @@ func _process(delta: float) -> void:
 	position += transform.x * speed * delta
 	
 	if health <= 0:
+		#nothing special happens when the enemy dies, for now at least.
 		queue_free()
+
+func _on_area_entered(area: Area2D) -> void:
+	target.enemy_happen_count +=1
+	queue_free()

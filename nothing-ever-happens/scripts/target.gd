@@ -7,6 +7,8 @@ var distance = 700
 #affects diffuculty
 var speed = 100
 var time = 1
+var enemy_spawn_count = 0
+var enemy_happen_count = 0
 
 #i have these vars for future use, as we can now edit the proportion between time and speed on the fly in the game (diffuculty is gonna be for both of them)
 var diffuculty : float
@@ -34,4 +36,6 @@ func spawn_enemy():
 		timer.wait_time = time / enemy_cooldown_diff / diffuculty
 		
 		add_sibling(enemy)
+		enemy_spawn_count +=1
 		timer.start()
+		
