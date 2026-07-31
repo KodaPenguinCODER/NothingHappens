@@ -2,11 +2,11 @@ extends CharacterBody2D
 
 
 @onready var gun = get_node("gun")
-
+@export var target:Node2D
 
 
 var drag = 0.9
-const JUMP_VELOCITY = -500
+const JUMP_VELOCITY = -550
 var speed = 40
 var gun_dir
 var health = 1000
@@ -16,11 +16,9 @@ var dead = false
 var floor_angle
 
 
-
+"scale"
 
 	
-
-
 	 
 func _process(_delta: float) -> void:
 	
@@ -42,7 +40,7 @@ func _physics_process(_delta: float) -> void:
 	#gravity
 	if not is_on_floor(): #if not on floor, apply gravity
 		velocity += get_gravity() #velocity is having negative y force (gravity) added, and it is * delta becasue it needs to be
-	
+		
 	
 
 	

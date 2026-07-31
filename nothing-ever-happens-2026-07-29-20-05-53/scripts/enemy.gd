@@ -1,12 +1,12 @@
 extends Node2D
 
-@onready var target = get_parent().get_node("Target")
+@onready var target = get_parent().get_node("Path2D/PathFollow2D/Target")
 var speed #p/s to target
 var health = 1
 
 
 func _process(delta: float) -> void:
-	look_at(target.position)
+	look_at(target.global_position)
 	
 	rotation_degrees = fposmod(rotation_degrees, 360)  #just copied this from gun script lol
 	
